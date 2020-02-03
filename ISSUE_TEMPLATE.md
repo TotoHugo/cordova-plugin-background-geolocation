@@ -1,5 +1,3 @@
-<!-- PLEASE DON'T DELETE THIS TEMPLATE, OR YOUR ISSUE WILL BE CLOSED/IGNORED !!! -->
-
 <!--- Provide a general summary of the issue in the Title above -->
 
 ## Your Environment

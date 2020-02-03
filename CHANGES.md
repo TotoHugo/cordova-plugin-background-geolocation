@@ -1,80 +1,9 @@
 ## Changelog
 
-### [3.0.0] - unreleased
-#### Added
-- checkStatus if service is running
-- events [start, stop, authorization, background, foreground]
-- implement all methods for both platforms
-- new RAW_LOCATION_PROVIDER
-
-Since alpha.8:
-- onError event signature = { code, message }
-- post/sync attributes customization via postTemplate config prop
-- enable partial plugin reconfiguration
-- Android on "activity" event
-- iOS configuration persistence
-
-Since alpha.12:
-- iOS ACTIVITY_PROVIDER (experimental)
-
-Since alpha.15:
-- checkStatus returns status of location services (locationServicesEnabled)
-- iOS RAW_LOCATION_PROVIDER continue to run on app terminate
-
-Since alpha.19:
-- Android Headless Task
-
-Since alpha.20:
-- Android location parameters isFromMockProvider and mockLocationsEnabled
-
-Since alpha.24:
-- Android Oreo support
-
-#### Changed
-- start and stop methods doesn't accept callback (use event listeners instead)
-- for background syncing syncUrl option is required
-- on Android DISTANCE_FILTER_PROVIDER now accept arbitrary values (before only 10, 100, 1000)
-- all plugin constants are in directly BackgroundGeolocation namespace. (check index.js)
-- plugin can be started without executing configure (stored settings or defaults will be used)
-- location property locationId renamed to just id
-- iOS pauseLocationUpdates now default to false (becuase iOS docs now states that you need to restart manually if you set it to true)
-- iOS finish method replaced with startTask and endTask
-
-Since alpha.8:
-- Android bind to service on facade construct
-
-Since alpha.14:
-- iOS saveBatteryOnBackground defaults to false
-
-Since alpha.15:
-- shared code base with react-native
-
-### Fixed
-
-Since alpha.13:
-- iOS open location settings on iOS 10 and later (PR #158) by @asafron
-
-Since alpha.15:
-- checkStatus authorization
-- Android fix for #362 Build Failed: cannot find symbol (PR #378)
-
-Since alpha.18:
-- Android fix #276 - NullPointerException: onTaskRemoved
-- Android fix #380 - allow to override android support library
-
-Since alpha.19:
-- Android fix event listeners not triggering after app is restarted and service was running
-
-Since alpha.23:
-- iOS fix #394 - App Store Rejection - Prefs Non-Public URL Scheme
-- iOS reset connectivity status on stop
-
-Since alpha.24:
-- Android fix service accidently started with default or stored config
-
 ### [2.3.3] - 2017-11-17
 ### Added
 - Android allow override google play services version
+
 
 ### [2.3.2] - 2017-11-06
 ### Fix
